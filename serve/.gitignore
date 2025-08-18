@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+.eggs/
+
+# Virtual environment
+venv/
+.env/
+.env.bak/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Database & cache
+memory.db
+*.sqlite3
+*.db
+
+# Logs
+*.log
+logs/
+
+# Model weights & checkpoints
+*.bin
+*.pt
+*.ckpt
+*.safetensors
+finetuned/
+
+# Hugging Face cache
+.huggingface/
+transformers_cache/
+cache/
+~/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
