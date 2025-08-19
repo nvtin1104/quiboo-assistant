@@ -8,3 +8,4 @@ uvicorn
 gradio
 sqlite-utils
 datasets
+huggingface

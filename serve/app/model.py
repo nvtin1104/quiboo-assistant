@@ -1,15 +1,15 @@
-from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+from transformers import AutoModelForCausalLM, AutoTokenizer
 
-MODEL_ID = "microsoft/phi-3-mini-4k-instruct"
+MODEL_PATH = "vinai/PhoGPT-4B-Chat"
 
-bnb_config = BitsAndBytesConfig(
-    load_in_4bit=True,
-    bnb_4bit_compute_dtype="float16"
+tokenizer = AutoTokenizer.from_pretrained(
+    MODEL_PATH,
+    trust_remote_code=True
 )
 
-tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
 model = AutoModelForCausalLM.from_pretrained(
-    MODEL_ID,
-    quantization_config=bnb_config,
+    MODEL_PATH,
+    trust_remote_code=True,
+    torch_dtype="auto",
     device_map="auto"
 )
